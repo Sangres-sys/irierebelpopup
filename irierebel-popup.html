@@ -90,7 +90,7 @@
 <body>
 
 <div id="irie-popup">
-  <div id="popup-close" onclick="document.getElementById('irie-popup').style.display='none'">&times;</div>
+  <div id="popup-close" onclick="closePopup()">&times;</div>
   <h3>Unterstütze IrieRebel – mit einem Klick</h3>
   <p>Wenn dir unsere Inhalte gefallen, kannst du uns unterstützen, indem du deine Hanfsamen oder Grow-Produkte über unsere Partner kaufst – ganz ohne Mehrkosten.</p>
   <a href="https://www.irierebel.com/hanfsamen-katalog/" target="_blank" rel="nofollow sponsored" class="popup-btn btn-green">Zu den Hanfsamen</a>
@@ -98,9 +98,35 @@
 </div>
 
 <script>
-  setTimeout(() => {
-    document.getElementById("irie-popup").style.display = "block";
-  }, 10000);
+  let popupShown = sessionStorage.getItem('irie-popup-shown');
+
+  function showPopup() {
+    if (!popupShown) {
+      document.getElementById("irie-popup").style.display = "block";
+      sessionStorage.setItem('irie-popup-shown', 'true');
+    }
+  }
+
+  function closePopup() {
+    document.getElementById("irie-popup").style.display = "none";
+  }
+
+  // Trigger: Zeit (15 Sek.)
+  setTimeout(showPopup, 15000);
+
+  // Trigger: Scrolltiefe (50%)
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > (document.body.scrollHeight / 2)) {
+      showPopup();
+    }
+  });
+
+  // Trigger: Exit Intent (Maus oben raus)
+  document.addEventListener("mouseout", function(e) {
+    if (!e.toElement && !e.relatedTarget && e.clientY < 50) {
+      showPopup();
+    }
+  });
 </script>
 
 </body>
