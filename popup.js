@@ -8,11 +8,11 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      width: 300px;
+      width: 320px;
       background-color: #fff;
       border: 2px solid #4CAF50;
       border-radius: 12px;
-      padding: 16px;
+      padding: 18px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.2);
       z-index: 9999;
       display: none;
@@ -22,22 +22,23 @@
     }
     #irie-popup h3 {
       margin-top: 0;
-      font-size: 20px;
+      font-size: 22px;
       color: #2e7d32;
     }
     #irie-popup p {
-      font-size: 14px;
-      margin-bottom: 16px;
+      font-size: 15px;
+      margin-bottom: 18px;
     }
     .popup-btn {
       display: inline-block;
-      width: 90%;
+      width: 100%;
       text-align: center;
-      margin-bottom: 10px;
-      padding: 10px;
+      margin-bottom: 12px;
+      padding: 14px;
       border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 16px;
       color: #fff;
       box-sizing: border-box;
     }
@@ -57,7 +58,7 @@
       position: absolute;
       top: 8px;
       right: 12px;
-      font-size: 18px;
+      font-size: 20px;
       color: #999;
       cursor: pointer;
     }
@@ -77,8 +78,8 @@
     <div id="popup-close" onclick="document.getElementById('irie-popup').style.display='none'">&times;</div>
     <h3>Unterstütze IrieRebel – mit einem Klick</h3>
     <p>Wenn dir unsere Inhalte gefallen, kannst du uns unterstützen, indem du deine Hanfsamen oder Grow-Produkte über unsere Partner kaufst – ganz ohne Mehrkosten.</p>
-    <a href="https://www.irierebel.com/hanfsamen-katalog/" target="_blank" rel="nofollow sponsored" class="popup-btn btn-green">Zu den Hanfsamen</a>
-    <a href="https://www.irierebel.com/growshop/" target="_blank" rel="nofollow sponsored" class="popup-btn btn-orange">Zum Growshop</a>
+    <a href="https://www.irierebel.com/hanfsamen-katalog/" target="_blank" rel="nofollow sponsored" class="popup-btn btn-green">➤ Zu den Hanfsamen</a>
+    <a href="https://www.irierebel.com/growshop/" target="_blank" rel="nofollow sponsored" class="popup-btn btn-orange">➤ Zum Growshop</a>
   `;
   document.body.appendChild(div);
 
